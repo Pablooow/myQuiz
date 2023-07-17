@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f3L-Og-Azg">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ViewController-->
+        <scene sceneID="Dhe-py-EXX">
+            <objects>
+                <viewController title="ViewController" id="f3L-Og-Azg" customClass="ViewController" customModule="myQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b7y-J1-bqJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="ZLH-e9-kpS">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXW-Ao-J9f">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="63"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hco-sy-x9S">
+                                        <rect key="frame" x="0.0" y="69" width="393" height="416"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPc-xY-ck4">
+                                        <rect key="frame" x="0.0" y="491" width="393" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="pHR-sH-GDo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Choice 1" backgroundImage="Rectangle">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="buttonGotTouched:" destination="f3L-Og-Azg" eventType="touchUpInside" id="odk-Nu-uZq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ne-nN-eJ5">
+                                        <rect key="frame" x="0.0" y="577" width="393" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="XW5-bv-Tba"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Choice 2" backgroundImage="Rectangle"/>
+                                        <connections>
+                                            <action selector="buttonGotTouched:" destination="f3L-Og-Azg" eventType="touchUpInside" id="HaL-zo-J7z"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ma-tK-h5e">
+                                        <rect key="frame" x="0.0" y="663" width="393" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="z6h-NZ-6Eh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Choice 3" backgroundImage="Rectangle"/>
+                                        <connections>
+                                            <action selector="buttonGotTouched:" destination="f3L-Og-Azg" eventType="touchUpInside" id="0dd-P9-eUN"/>
+                                        </connections>
+                                    </button>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Dzm-yF-djl">
+                                        <rect key="frame" x="0.0" y="749" width="393" height="11"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="HFb-MG-2bt"/>
+                                        </constraints>
+                                    </progressView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RhH-HA-QS2"/>
+                        <color key="backgroundColor" red="0.53908502859471108" green="0.45484827806182215" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="RhH-HA-QS2" firstAttribute="bottom" secondItem="ZLH-e9-kpS" secondAttribute="bottom" id="1NI-uu-bi2"/>
+                            <constraint firstItem="RhH-HA-QS2" firstAttribute="trailing" secondItem="ZLH-e9-kpS" secondAttribute="trailing" id="Id7-CS-frl"/>
+                            <constraint firstItem="ZLH-e9-kpS" firstAttribute="top" secondItem="RhH-HA-QS2" secondAttribute="top" id="rbM-B8-qy1"/>
+                            <constraint firstItem="ZLH-e9-kpS" firstAttribute="leading" secondItem="RhH-HA-QS2" secondAttribute="leading" id="skA-Yg-eCh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="choiceOne" destination="ZPc-xY-ck4" id="2jZ-2v-8lZ"/>
+                        <outlet property="choiceThree" destination="3Ma-tK-h5e" id="b2K-Pg-6j6"/>
+                        <outlet property="choiceTwo" destination="9Ne-nN-eJ5" id="n78-Ht-Hsx"/>
+                        <outlet property="progressBar" destination="Dzm-yF-djl" id="amI-Sk-PTh"/>
+                        <outlet property="questionLabel" destination="hco-sy-x9S" id="sjL-78-Vij"/>
+                        <outlet property="scoreLabel" destination="PXW-Ao-J9f" id="ur2-lT-s6l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ksR-bQ-4Ol" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="309.16030534351142" y="-138.02816901408451"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Rectangle" width="322" height="68"/>
+    </resources>
+</document>
